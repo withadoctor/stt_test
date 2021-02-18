@@ -1,0 +1,4 @@
+server.spec
+build
+dist
+__pycache__
