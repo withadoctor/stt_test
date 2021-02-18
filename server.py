@@ -1,7 +1,11 @@
 """
+conda create -n stt python=3.6 -y
+activate stt
 conda install flask
 pip install flask-cors
 pip install pywinauto
+pip install pyinstaller
+pyinstaller --add-data "templates;templates" --add-data "static;static" server.py
 """
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
