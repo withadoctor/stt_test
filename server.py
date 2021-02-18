@@ -3,15 +3,15 @@ conda install flask
 pip install flask-cors
 pip install pywinauto
 """
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
 
 @app.route('/')
-def hello():
-    return 'Hello World!'
+def index():
+    return render_template('./index.html')
 
 @app.route('/api/speech')
 def stt():
